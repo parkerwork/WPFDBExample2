@@ -12,15 +12,14 @@ namespace WPFDBExample
     using System;
     using System.Collections.Generic;
     
-    public partial class Emp
+    public partial class Associate
     {
-        public int EmployeeID { get; set; }
+        public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string FavoriteColor { get; set; }
-
-        public string getSummary() {
-            return String.Format("Employee Name:{0} Favorite Color:{1} Database ID Number:{2}");
-        }
+        public string FullName { get { return FirstName + " " + LastName; } }
+        public int DepartmentID { get; set; }
+    
+        public virtual Department Department { get; set; }
     }
 }

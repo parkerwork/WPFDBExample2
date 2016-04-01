@@ -13,10 +13,10 @@ namespace WPFDBExample
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbexamplesEntities : DbContext
+    public partial class TESTEntities : DbContext
     {
-        public dbexamplesEntities()
-            : base("name=dbexamplesEntities")
+        public TESTEntities()
+            : base("name=TESTEntities")
         {
         }
     
@@ -25,6 +25,8 @@ namespace WPFDBExample
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Emp> Emps { get; set; }
+        public virtual DbSet<Associate> Associates { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

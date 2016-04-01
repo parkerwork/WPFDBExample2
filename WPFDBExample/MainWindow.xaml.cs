@@ -13,20 +13,38 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WPFDBExample {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
-        public MainWindow() {
-            using (dbexamplesEntities entities = new dbexamplesEntities()) {
-                InitializeComponent();
-                
-            }
+        TESTEntities db = new TESTEntities();
+
+        public MainWindow() {             
+
+            InitializeComponent();
+
+            
+            comboBox.ItemsSource = db.Departments.ToList();
+            comboBox.DisplayMemberPath = "Department1";
+            comboBox.SelectedValuePath = "ID";
+
+
         }
 
-        private void pull_Click(object sender, RoutedEventArgs e) {
-            MessageBox.Show(userFirst.Text);
+       
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            int deptSelected = (Int32)comboBox.SelectedValue;
+            comboBox1.ItemsSource = db.Associates.Where(x => x.DepartmentID == deptSelected).ToList();
+            comboBox1.DisplayMemberPath = "FullName";
+            comboBox1.SelectedValuePath = "ID";
+
+        }
+
+        private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            
+
         }
     }
 }
