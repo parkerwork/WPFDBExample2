@@ -85,6 +85,9 @@
     <Compile Include="Associate.cs">
       <DependentUpon>TestModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CRUDWindow.xaml.cs">
+      <DependentUpon>CRUDWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Department.cs">
       <DependentUpon>TestModel.tt</DependentUpon>
     </Compile>
@@ -106,6 +109,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="UPDATEWindow.xaml.cs">
+      <DependentUpon>UPDATEWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CRUDWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -118,6 +128,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UPDATEWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

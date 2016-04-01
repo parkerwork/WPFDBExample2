@@ -9,6 +9,7 @@
     <Grid>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="188,69,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged"/>
         <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="188,146,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox1_SelectionChanged"/>
+        <Button x:Name="button" Content="GoTo CRUD" HorizontalAlignment="Left" Height="28" Margin="390,281,0,0" VerticalAlignment="Top" Width="117" Click="button_Click"/>
     </Grid>
 
 </Window>

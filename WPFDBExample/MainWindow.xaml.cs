@@ -40,5 +40,11 @@ namespace WPFDBExample {
         private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e) {
                         
         }
+
+        private void button_Click(object sender, RoutedEventArgs e) {
+            CRUDWindow cw = new CRUDWindow();
+            cw.Show();
+            this.Close();
+        }
     }
 }
