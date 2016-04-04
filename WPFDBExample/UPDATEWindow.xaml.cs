@@ -25,6 +25,10 @@ namespace WPFDBExample {
             
             var myList = db.Associates.ToList();
             dataGrid.ItemsSource = myList;
+            var myOtherList = db.Departments.ToList();
+            Departments.ItemsSource = myOtherList;
+            Departments.DisplayMemberPath = "Department";
+            Departments.SelectedValuePath = "ID";
 
         }
 
@@ -38,6 +42,12 @@ namespace WPFDBExample {
             ass.DepartmentID = 1;
 
             db.Associates.Add(ass);
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e) {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Close();
         }
     }
 }

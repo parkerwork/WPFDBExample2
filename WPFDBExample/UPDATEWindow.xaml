@@ -13,9 +13,10 @@
                 <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
                 <DataGridTextColumn Header="Department" Binding="{Binding DepartmentID}"/>
-
+                <DataGridComboBoxColumn x:Name="Departments" Header="Department" />
             </DataGrid.Columns>
 
         </DataGrid>
+        <Button x:Name="button" Content="Back" HorizontalAlignment="Left" Margin="773,10,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
     </Grid>
 </Window>
