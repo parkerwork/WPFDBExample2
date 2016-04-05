@@ -12,7 +12,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
-                <DataGridTextColumn Header="Department" Binding="{Binding DepartmentID}"/>
+                <!--<DataGridTextColumn Header="Department" Binding="{Binding DepartmentID}"/>-->
                 <DataGridComboBoxColumn x:Name="Departments" Header="Department" />
             </DataGrid.Columns>
 
